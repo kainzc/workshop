@@ -1,0 +1,42 @@
+<link rel="icon" href="https://cdn.discordapp.com/attachments/957340283123683359/957356552514334740/guardian_logo_small.png"
+  type="image/x-icon"/>
+
+<title>Guardian</title>
+<div class = "centerText">
+<head>
+    <link rel = "stylesheet" href = "homepage.css" />
+</head>
+<body>
+    <img class = "myLogo" src="https://cdn.discordapp.com/attachments/957340283123683359/957499206568906752/guardian_logo.png"/>
+    <button type="submit" class = "myButton">Log Out</button>
+
+    <br /><br /><br /><br />
+<div class = "webPortalText">
+
+    <a href="/form" class = "lineRemover">Enter Medication!</a>
+</div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+
+
+
+<div class = "taskBox">
+  <ul>
+    
+      <li>
+        <div class = "taskBoxTitle"></div>
+        <div class = "rightAlligned">
+          <div class = "taskBoxDetailedInformation">Next Medication Time: <%= el.time %></div>
+          <label class="container">Taken
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </li>
+  </ul>
+</div>
+
+<form action="/logout?_method=DELETE" method="POST">
+</form>

@@ -1,0 +1,151 @@
+
+
+
+.webPortalText{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 21px;
+letter-spacing: -0.4px;
+word-spacing: 0.6px;
+color: #000000;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.myLogo{
+  width: 440px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.centerText {
+
+    text-align: center
+}
+
+.taskBox{
+
+    
+  margin-top: 50px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  height: 300px;
+  background: transparent;
+  border: 5px solid #552586;
+}
+
+.taskBoxTitle{
+
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 27px;
+letter-spacing: -0.4px;
+word-spacing: 0.6px;
+color: purple;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+
+
+
+}
+
+.lineRemover{
+  text-decoration: none;
+  font-size: 33px;
+}
+
+.taskBoxDetailedInformation{
+
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 16px;
+letter-spacing: -0.4px;
+word-spacing: 1.2px;
+color: #000000;
+font-weight: 400;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+
+.rightAlligned{
+
+
+   
+
+right: 0;
+
+top: 0;
+}
+
+.myButton{
+  margin-top:-65px;
+  margin-right: -92%;
+
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
