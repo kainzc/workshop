@@ -1,0 +1,1 @@
+(define (sum_of_positives list)(if (null? (car list) 0 (if > (car list) 0) (+ (car list) (sum_of_positives cdr list)) (+ 0 (sum_of_positives cdr list)))))

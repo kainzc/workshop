@@ -1,0 +1,42 @@
+#lang racket
+
+; Find max element in a list of numbers.
+; Note: Racket has an built-in function called max, but this function expects
+;       the values as separate parameters and not passed as a list.
+;
+; @param  lst The list that will be searched for the maximum value.
+; @return The maximum value in lst.
+(define (my-max lst)
+  (cond
+    [(not (list? lst)) #f]
+    [(null? lst) #f]
+    [(not (number? (car lst))) #f]
+    [(null? (cdr lst)) (car lst)]
+    [#t (if (> (car lst) (my-max (cdr lst)))
+            (car lst)
+            (my-max (cdr lst)))]))
+
+
+; Find max element in a list of numbers. 
+; Note: Racket has an built-in function called max, but this function expects
+;       the values as separate parameters and not passed as a list.
+;
+; @param  lst The list that will be searched for the maximum value.
+; @return The maximum value in lst.
+; Version using a LET expression.
+(define (my-max2 lst)
+  (cond
+    [(not (list? lst)) #f]
+    [(null? lst) #f]
+    [(not (number? (car lst))) #f]
+    [(null? (cdr lst)) (car lst)]  ; only 1 number?
+    [#t (let ([head (car lst)]
+              [max-rest (my-max2 (cdr lst))])
+          (if (> head max-rest)
+              head
+              max-rest))]))
+
+
+; for testing the speed of the two solutions above
+(define lst '(1 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 114 1 1 1 1 1 1 11 1 1 1 1))
+    
